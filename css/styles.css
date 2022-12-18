@@ -26,17 +26,7 @@ body {
     background: var(--main-background-color);
     color: var(--second-text-color);
 }
-.nav-list,
-.contact-list,
-.btn-list,
-.portfolio-list,
-.address-list,
-.our-command-list,
-.which-do-list,
-.benefits-list,
-.social-icon-list,
-.clients-list,
-.social-list-footer
+ul
 {
     list-style: none;
     padding: 0 0;
@@ -648,19 +638,20 @@ margin-left: 30px;
     background: var(--btn-background-color);
     
 }
-.our-command .conteiner {
+.our-command__conteiner {
     display: block;
  
 }
-.social-icon-list {
+.social-list {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     margin-top: 16px;
     height: 44px;
+    list-style: none;
 }
 
-.social-icon-list a {
+.social-list__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -676,22 +667,23 @@ margin-left: 30px;
 
 }
 
-.social-icon-list a:hover,
-.social-icon-list a:focus {
+.social-list__link:hover,
+.social-list__link:focus {
     
     background-color: var(--accent-color);
     fill: var(--main-background-color);
 }
     
-.social-icon-list li + li {
+.social-list  .social-list__item + .social-list__item {
    
   margin-left: 10px;
     }
 
-.our-command-list {
+.our-command__list {
     display: flex;
+    list-style: none;
 }
-.our-command-list .item {
+.our-command__item {
     width: 270px;
     padding: 0 0;
     background: var(--main-background-color) ;
@@ -699,26 +691,26 @@ margin-left: 30px;
     border-radius: 0px 0px 4px 4px;
    
 }
-.our-command-list>.item:first-child {
+.our-command__item:first-child {
     margin-left: 0;
 }
-.our-command-list>.item:last-child {
+.our-command__item:last-child {
     margin-right: 0;
 }
-.our-command-list .item + .item {
+.our-command__list .our-command__item + .our-command__item {
     margin-left: 30px;
 }
 
 
-.our-command-cards-text {
-   
+.command-card {
+
     padding: 30px 0;
 }
-.our-command-text {
+.command-card__text {
     margin-top: 10px;
 }
 
-.our-command-title {
+.our-command__title {
     
   
     margin-bottom: 50px;
@@ -730,7 +722,7 @@ margin-left: 30px;
     
     color: var(--main-text-color);
 }
- .our-command-list.title {
+ .command-card__title {
      display: block;
     font-weight: 500;
     font-size: 16px;
@@ -742,7 +734,7 @@ margin-left: 30px;
     
     color: var(--main-text-color);
  }
-.our-command-text {
+.command-card__text {
     font-size: 16px;
     line-height: 1.19;
      
@@ -754,15 +746,15 @@ margin-left: 30px;
    
 }
 /*-------Clients-------*/
-section.clients {
+.clients {
     padding-top: 94px;
     padding-bottom: 94px;
     } 
- .clients .conteiner {
+ .clients__conteiner {
     display: block;
  }
 
-.clients-title {
+.clients__title {
     margin-bottom: 50px;
 
     font-size: 36px;
@@ -773,13 +765,13 @@ section.clients {
     color: var(--main-text-color);
     
 }
-.clients-list {
+.clients__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.clients-list a {
+.clients__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -798,13 +790,13 @@ section.clients {
 
     }
 
-.clients-list .item + .item {
+.clients__list .clients__item + .clients__item {
     margin-left: 30px;
 }
 
 
-.clients-list a:hover,
-.clients-list a:focus {
+.clients__list a:hover,
+.clients__list a:focus {
 fill: var(--accent-color);
 border-color: var(--accent-color);
 
@@ -812,11 +804,8 @@ border-color: var(--accent-color);
 
 
 
-
-
-
 /* -------------------Footer------------------ */
-footer {
+.footer {
    padding-top: 60px;
    padding-bottom: 60px;
     
@@ -824,7 +813,7 @@ footer {
 
 }
 
-footer .conteiner {
+.footer__conteiner {
     align-items: baseline;
    
 }
@@ -832,11 +821,11 @@ footer .conteiner {
 .social-footer {
     margin-left: 70px;
 }
-.contacts-footer {
+.footer__contacts {
     width: 231px;
 }
 
- .social-list-footer a {
+  .footer-social__link {
     display: flex;
     justify-content: center;
     align-items: center ;
@@ -855,22 +844,22 @@ footer .conteiner {
    
  }
 
- .social-list-footer {
+ .footer-social__list {
     display: flex;
     
  }
     
-.social-list-footer .item + .item {
+.footer-social__list .footer-social__item + .footer-social__item {
     margin-left: 10px;
 }
 
-.social-list-footer a:hover,
-.social-list-footer a:focus {
+.footer-social__link:hover,
+.footer-social__link:focus {
 
 background-color: var(--accent-color)
 }
 
-.social-footer.title {
+.footer-social__title {
     margin-left: 0;
     margin-bottom: 20px;  
 
@@ -886,27 +875,25 @@ background-color: var(--accent-color)
 }
 
 
-footer .address-list,
-footer .logo {
+.footer-address-list,
+.footer__logo {
 margin-right: auto;
 }
-.address-list .item + .item {
+.footer-address-list .footer-address-list__item + .footer-address-list__item {
 margin-top: 9px;
 }
 
 
-footer .part-logo {
+.footer__part-logo {
     color: var(--main-background-color);
    
 }
 
-footer address {
+.footer-address {
     margin-top: 20px;
 }
 
-.address-list .adress,
-.address-list .mail,
-.address-list .tel {
+.footer-address-list__link {
 
     font-style: normal;
     text-decoration: none;
@@ -920,23 +907,22 @@ footer address {
 
     
 }
- .address-list .adress:hover, 
- .address-list .mail:hover,
- .address-list .tel:hover,
- .address-list .adress:focus,
- .address-list .mail:focus,
- .address-list .tel:focus
- {
+ .footer-address-list__link:hover, 
+  .footer-address-list__link:focus
+  {
     color: var(--accent-color);
  }
 
-.address-list .mail,
-.address-list .tel {
+.footer-address-list__link {
     
 color: var(--address-text-color);
 }
 
-.mailing-footer-title {
+.footer-address-list__link--color-text {
+    color: var(--main-background-color);
+}
+
+.footer-mailling__title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -948,15 +934,15 @@ color: var(--address-text-color);
 }
 
 
-.mailing-footer {
+.footer-mailling {
     
-    margin-left: auto;
+margin-left: auto;
 }
-.mailing-footer>form {
+.footer-mailling__form {
     display: flex;
     
 }
-.mail-input-footer {
+.footer-mailling__input {
 
     padding: 15px 16px;
     width: 358px;
@@ -968,7 +954,7 @@ color: var(--address-text-color);
     color: rgba(255, 255, 255, 0.6)
 }
 
-.mailing-footer-button {
+.footer-mailling__btn {
    display: flex;
    align-items: center;
 
@@ -993,13 +979,13 @@ color: var(--address-text-color);
     transition-delay: var(--effect-time);
 
 }
-.mailing-footer-button:hover,
-.mailing-footer-button:focus {
+.footer-mailling__btn:hover,
+.footer-mailling__btn:focus {
     background: var(--active-btn-color);
 }
 
 
-.mailing-footer-button>svg {
+.footer-mailling__icon {
     margin-left: 10px;
 }
 
