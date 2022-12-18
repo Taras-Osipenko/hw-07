@@ -209,11 +209,11 @@ fill: var(--accent-color);
     background-position: center;
 
    }
-   .hero>.conteiner {
+   .hero__conteiner {
     display: block;
    
    }
-.hero-title {
+.hero__title {
     
     width: 696px;
     margin-right: auto;
@@ -233,7 +233,7 @@ fill: var(--accent-color);
 
 }
 
-.order-btn {
+.hero__btn {
     display: block;
     width: 216px;
     height: 50px;
@@ -262,8 +262,8 @@ fill: var(--accent-color);
 
 
 }
-.order-btn:hover,
-.order-btn:focus {
+.hero__btn:hover,
+.hero__btn:focus {
     background: var(--active-btn-color);
 }
 .backdrop {
@@ -283,7 +283,7 @@ fill: var(--accent-color);
   
 }
 
-.backdrop.is-hidden {
+.backdrop--hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
@@ -291,10 +291,9 @@ fill: var(--accent-color);
     
 }
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.9);
-}
+
 .modal {
+    transform: translate(-50%, -50%) scale(0.9);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -320,7 +319,7 @@ fill: var(--accent-color);
 }
 
 
-.close-modal-btn {
+.modal__close-btn {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -344,8 +343,8 @@ fill: var(--accent-color);
 
      
 }
-.close-modal-btn:hover,
-.close-modal-btn:focus {
+.modal__close-btn:hover,
+.modal__close-btn:focus {
     fill: var(--accent-color);
 }
 
@@ -354,7 +353,7 @@ fill: var(--accent-color);
 
 
 
-.modal-title {
+.modal__title {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -365,18 +364,18 @@ fill: var(--accent-color);
     margin-bottom: 12px;
 }
 
-.form-field {
+.form__field {
 position: relative;
 display: flex;
 flex-direction: column;
 
 }
-.form div + div {
+.form .form__field + .form__field {
 margin-top: 10px;
 }
 
 
-.form-field label {
+.form__label {
     margin-bottom: 4px;
 
     font-weight: 400;
@@ -387,7 +386,7 @@ margin-top: 10px;
     color: var(--second-text-color);
 }
 
-.form-input {
+.form__input {
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -412,7 +411,7 @@ margin-top: 10px;
     color: var(--second-text-color)
 }
 
-.checkbox-input {
+.checkbox-label__input {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -422,7 +421,7 @@ margin-top: 10px;
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-.icon-checkbox {
+.checkbox-label__icon {
     display: inline-block;
     margin-right: 8px;
     width: 16px;
@@ -430,7 +429,7 @@ margin-top: 10px;
     /* background-color: red; */
     background-image: url(../images/submit-icon.svg) ;
 }
-.checkbox-input:checked + .icon-checkbox {
+.checkbox-label__input:checked + .checkbox-label__icon {
     transform: scale(1.2);
     border-color: transparent;
     background-image: url(../images/icon-check.svg);
@@ -478,31 +477,31 @@ margin-top: 10px;
 
 
 
-.modal-icon {
+.form__icon {
     position: absolute;
     top: 50%;
     left: 12px;
     fill: var(--main-text-color);
     
 }
-.form-field:focus-within  .modal-icon
+.form__field:focus-within  .form__icon
  {
     fill: var(--accent-color);
     
 }
-.form-field:focus-within .form-input {
+.form__field:focus-within .form__input {
     outline: none;
     border: 1px solid var(--accent-color);
 
 }
 
-.form-field:focus-within .textarea-input {
+.form__field:focus-within .form__textarea-input {
     outline: none;
     border: 1px solid var(--accent-color);
     border-radius: 4px;
 }
 
-.textarea-input {
+.form__textarea-input {
     resize:none;
     height: 120px;
     width: 448px;
@@ -512,7 +511,7 @@ margin-top: 10px;
 
 }
 
-.checkbox-link {
+.checkbox-label__link {
     color: var(--accent-color);
     margin-left: 2px;
 
@@ -520,7 +519,7 @@ margin-top: 10px;
 
 /* -------------------Benefits------------------ */
 /* ---Візуально приховую заголовок--- */
-.benefits-title {
+.benefits__title {
     
     position: absolute;
     width: 1px;
@@ -535,7 +534,7 @@ margin-top: 10px;
     overflow: hidden;
     }
 /* ----------------------------------- */
-.benefits-icon-box {
+.benefits__icon-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -550,11 +549,11 @@ margin-top: 10px;
     padding-bottom: 94px;
 }
 
-.benefits .conteiner {
+.benefits__conteiner {
     display: block;
 }
     
-.benefits-list .title {
+.benefits__title-card {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -565,18 +564,19 @@ margin-top: 10px;
 }
 
 
-.benefits-list {
+.benefits__list {
 display: flex;
 margin: 0 auto;
+list-style: none;
 }
 
-.benefits-list>li{
+.benefits__item {
 width: 270px;
 }
-.benefits-list .item + .item {
+.benefits__list .benefits__item + .benefits__item {
 margin-left: 30px;
 }
-.benefits-list .text {
+.benefits__text-card {
     margin-top: 10px;
 }
 
@@ -587,12 +587,12 @@ margin-left: 30px;
     padding-bottom: 94px;
    
 }
-.which-do .conteiner {
+.which-do__conteiner {
     display: block;
 }
 
 
-.which-do-title {
+.which-do__title {
    
     margin-top: 0;
     margin-bottom: 50px;
@@ -605,25 +605,25 @@ margin-left: 30px;
     
     color: var(--main-text-color);
 }
-.which-do-list{
+.which-do__list{
     display: flex;
 }
-.which-do-list>li + li {
+.which-do__list>.which-do__item + .which-do__item {
     margin-left: 30px;
 }
-.which-do-list .item:first-child {
+.which-do__list:first-child {
     margin-left: 0;
 }
-.which-do-list .item:last-child {
+.which-do__list:last-child {
    margin-right: 0;
 }
 
-.work-picture-box {
+.which-do__picture-box {
     position: relative;
     overflow: hidden;
 }
 
-.overlay-work {
+.which-do__overlay {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;

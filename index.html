@@ -46,7 +46,7 @@
     </header>
    <main>
         <section class="hero">
-            <div class="conteiner">
+            <div class="conteiner hero__conteiner">
              <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
              <button type="button" class="hero__btn" data-modal-open>Замовити послугу</button>
              <div class="backdrop backdrop--hidden" data-modal>
@@ -62,36 +62,36 @@
                         <div class="form__field">
                             <label for="name" class="form__label">Ім'я</label>
                             <input type="text" name="name" id="name" class="form__input">
-                            <svg class="modal-icon" width="18" height="18">
+                            <svg class="form__icon" width="18" height="18">
                                 <use href="./images/icons.svg#icon-person"></use>
                             </svg>
                         </div>
                         <div class="form__field">
                             <label for="tel" class="form__label">Телефон</label>
                             <input type="tel" name="tel" id="tel" class="form__input">
-                            <svg class="modal-icon" width="18" height="18">
+                            <svg class="form__icon" width="18" height="18">
                                 <use href="./images/icons.svg#icon-phone"></use>
                             </svg>
                         </div>
-                        <div class="form-field">
-                            <label for="email" class="form-label">Пошта</label>
-                            <input type="email" name="email" id="email" class="form-input">
-                            <svg class="modal-icon" width="18" height="18">
+                        <div class="form__field">
+                            <label for="email" class="form__label">Пошта</label>
+                            <input type="email" name="email" id="email" class="form__input">
+                            <svg class="form__icon" width="18" height="18">
                                 <use href="./images/icons.svg#icon-email"></use>
                             </svg>
                         </div>
-                        <div class="form-field">
+                        <div class="form__field">
                             <label for="coment">Коментар</label>
-                            <textarea  class="textarea-input" 
+                            <textarea  class="form__textarea-input" 
                             name="coment" id="coment" 
                             placeholder="Введіть текст"></textarea>
                         </div>
                         <label class="checkbox-label">
                            
                             <input type="checkbox" name="offer"
-                             class="checkbox-input">
-                            <span class="icon-checkbox"></span>
-                            Погоджуюся з розсилкою та приймаю <a href="" class="checkbox-link"> 
+                             class="checkbox-label__input">
+                            <span class="checkbox-label__icon"></span>
+                            Погоджуюся з розсилкою та приймаю <a href="" class="checkbox-label__link"> 
                             Умови договору</a>
                         </label>
                         <button type="submit" class="submit-btn">Відправити</button>
@@ -106,97 +106,119 @@
         </section>
         <section class="benefits">
                 
-            <div class="conteiner">
-                <h2 class="benefits-title">Наші переваги</h2>
-                <ul class="benefits-list">
-                    <li class="item">
-                        <div class="benefits-icon-box">
-                            <svg class="icon" width="70" height="70">
+            <div class="conteiner benefits__conteiner">
+                <h2 class="benefits__title">Наші переваги</h2>
+                <ul class="benefits__list">
+                    <li class="benefits__item">
+                        <div class="benefits__icon-box">
+                            <svg class="benefits__icon" width="70" height="70">
                                 <use href="./images/icons.svg#icon-antena"></use>
                             </svg>
                         </div>
-                        <h3 class="title ">УВАГА ДО ДЕТАЛЕЙ</h3>
-                        <p class="text">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p></li>
-                    <li class="item">
-                        <div class="benefits-icon-box">
-                            <svg class="icon" width="70" height="70">
+                        <h3 class="benefits__title-card">УВАГА ДО ДЕТАЛЕЙ</h3>
+                        <p class="benefits__text-card">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p></li>
+                    <li class="benefits__item">
+                        <div class="benefits__icon-box">
+                            <svg class="benefits__icon" width="70" height="70">
                                 <use href="./images/icons.svg#icon-clock"></use>
                             </svg>
                         </div>
-                        <h3 class="title">ПУНКТУАЛЬНІСТЬ</h3>
-                        <p class="text">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
+                        <h3 class="benefits__title-card">ПУНКТУАЛЬНІСТЬ</h3>
+                        <p class="benefits__text-card">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
                     
                     </li>
-                    <li class="item">
-                        <div class="benefits-icon-box">
-                            <svg class="icon" width="70" height="70">
+                    <li class="benefits__item">
+                        <div class="benefits__icon-box">
+                            <svg class="benefits__icon" width="70" height="70">
                                 <use href="./images/icons.svg#icon-diagram"></use>
                             </svg>
                         </div>
-                        <h3 class="title">ПЛАНУВАННЯ</h3>
-                        <p class="text">Так само консультація з широким активом значною мірою зумовлює.</p>
+                        <h3 class="benefits__title-card">ПЛАНУВАННЯ</h3>
+                        <p class="benefits__text-card">Так само консультація з широким активом значною мірою зумовлює.</p>
                     </li>
-                    <li class="item">
-                        <div class="benefits-icon-box">
-                            <svg class="icon" width="70" height="70">
+                    <li class="benefits__item">
+                        <div class="benefits__icon-box">
+                            <svg class="benefits__icon" width="70" height="70">
                                 <use href="./images/icons.svg#icon-astronaut"></use>
                             </svg>
                         </div>
-                        <h3 class="title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-                        <p class="text">Значимість цих проблем настільки очевидна, що реалізація планових завдань</p> 
+                        <h3 class="benefits__title-card">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+                        <p class="benefits__text-card">Значимість цих проблем настільки очевидна, що реалізація планових завдань</p> 
                     </li>
                 </ul>
             </div>
         </section>
         <section class="which-do">
-            <div class="conteiner">
-                <h2 class="which-do-title">Чим ми займаємося</h2>
-                <ul class="which-do-list">
-                    <li class="item"> <div class="work-picture-box"><img src="./images/work-1.jpg" alt="Набір тексту на клавіатурі" width="370" height="294"><div class="overlay-work">Десктопні додатки</div></div> </li>
-                    <li class="item"> <div class="work-picture-box"><img src="./images/work-2.jpg" alt="Три дисплея смартфонів на моніторі ноутбука" width="370" height="294"><div class="overlay-work">Мобільні додатки</div></div> </li>
-                    <li class="item"> <div class="work-picture-box"><img src="./images/work-3.jpg" alt="Палітра кольорів на дисплеї планшета" width="370" height="294"><div class="overlay-work">Дизайнерські рішення</div></div> </li>
+            <div class="conteiner which-do__conteiner">
+                <h2 class="which-do__title">Чим ми займаємося</h2>
+                <ul class="which-do__list">
+                    <li class="which-do__item"> 
+                        <div class="which-do__picture-box">
+                            <img src="./images/work-1.jpg" alt="Набір тексту на клавіатурі" 
+                            width="370" height="294">
+                            <div class="which-do__overlay">Десктопні додатки</div>
+                        </div> 
+                    </li>
+                    <li class="which-do__item">
+                        <div class="which-do__picture-box">
+                            <img src="./images/work-2.jpg" alt="Три дисплея смартфонів на моніторі ноутбука" 
+                            width="370" height="294">
+                            <div class="which-do__overlay">Мобільні додатки</div>
+                        </div>
+                    </li>
+                    <li class="which-do__item">
+                        <div class="which-do__picture-box">
+                            <img src="./images/work-3.jpg" alt="Палітра кольорів на дисплеї планшета" 
+                            width="370" height="294">
+                            <div class="which-do__overlay">Дизайнерські рішення</div>
+                        </div> 
+                    </li>
                 </ul>
             </div>
         </section>
         <section class="our-command">
-            <div class="conteiner">
-                <h2 class="our-command-title">Наша команда</h2>
-                <ul class="our-command-list">
-                    <li class="item"><img src="./images/foto-1.jpg" alt="Усміхнений чоловік в окулярах" width="270" height="260"><div class="our-command-cards-text"><h3 class="our-command-list title">Ігор Дем'яненко</h3><p class="our-command-text">Product Designer</p>
-                    <ul class="social-icon-list">
-                    
-                        <li>
-                            <a href="">
-                                <svg class="icon" width="20" height="20">
-                                    <use href="./images/icons.svg#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <svg class="icon" width="20" height="20">
-                                    <use href="./images/icons.svg#icon-twiter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <svg class="icon" width="20" height="20">
-                                    <use href="./images/icons.svg#icon-facebook"></use>
-                                                    </svg>
-                                                    </a>
-                    
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                    <svg class=" icon" width="20" height="20">
-                                        <use href="./images/icons.svg#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    
-                    </ul>
-                    </div></li>
+            <div class="conteiner our-command__conteiner">
+                <h2 class="our-command__title">Наша команда</h2>
+                <ul class="our-command__list">
+                    <li class="item">
+                        <img src="./images/foto-1.jpg" alt="Усміхнений чоловік в окулярах"
+                        width="270" height="260">
+                        <div class="our-command-cards-text">
+                            <h3 class="our-command-list title">Ігор Дем'яненко</h3>
+                            <p class="our-command-text">Product Designer</p>
+                            <ul class="social-icon-list">
+                                <li>
+                                    <a href="">
+                                        <svg class="icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <svg class="icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-twiter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <svg class="icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                                            </svg>
+                                                            </a>
+                            
+                                                        </li>
+                                                        <li>
+                                                            <a href="">
+                                                            <svg class=" icon" width="20" height="20">
+                                                <use href="./images/icons.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                     <li class="item"><img src="./images/foto-2.jpg" alt="Білява жінка в окулярах" width="270" height="260"><div class="our-command-cards-text"><h3 class="our-command-list title">Ольга Рєпіна</h3><p class="our-command-text">Frontend Developer</p>
                         <ul class="social-icon-list">
                         
